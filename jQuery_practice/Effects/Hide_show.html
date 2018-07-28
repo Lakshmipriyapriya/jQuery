@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="../bootstrap/js/jquery.min.js"></script>
+	<script>
+		jQuery(document).ready(function(){
+			jQuery("#hide").click(function(){
+				jQuery("p").hide("fast");
+			})
+			jQuery("#show").click(function(){
+				jQuery("p").show("slow");
+			})
+			jQuery("#toggle").click(function(){
+				jQuery("p").toggle("slow");
+			})
+		})
+	</script>
+	
+</head>
+<body>
+	<p>
+		This will get apper and disapper based on your inputs
+	</p>
+	<button id="hide">
+		hide
+	</button>
+<button id="show">
+		show
+	</button>
+	<button id="toggle">
+		toggle
+	</button>
+</body>
+</html>

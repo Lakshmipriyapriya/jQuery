@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		TABLE
+	</title>
+	<link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
+	<script src="../bootstrap/js/jquery.min.js"></script>
+	<script src="./bootstrap/js/bootstrap.js"></script>
+	<script>
+		jQuery(document).ready(function(){
+			jQuery("button").click(function(){
+				jQuery("tr:odd").hide()
+			})
+		})
+	</script>
+</head>
+<body>
+<div class="container">
+	<table class="table table-bordered">
+		<thead>
+			<caption><p><strong>welcome to table operations page<strong></strong></p></caption>
+		<tr>
+			<th>FirstName</th>
+			<th>LastName</th>
+			<th>userName</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>priya</td>
+			<td>k.v</td>
+			<td>PRIYA</td>
+		</tr>
+		<tr>
+			<td>charan</td>
+			<td>k.v</td>
+			<td>CHARAN</td>
+		</tr>
+		<tr>
+			<td>Thulasi</td>
+			<td>k</td>
+			<td>thulasi</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+<button>
+	click me!
+</button>
+</body>
+</html>

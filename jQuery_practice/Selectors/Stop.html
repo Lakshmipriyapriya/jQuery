@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="./bootstrap/js/jquery.min.js"></script>
+	<script>
+		jQuery(document).ready(function(){
+			jQuery("#slide").click(function(){
+				jQuery("#slides").slideDown("5000");
+			})
+		jQuery("#stop").click(function(){
+				jQuery("#slides").stop();	
+		})
+	})
+	</script>
+	<style>
+		#slide, #slides {
+    padding: 5px;
+    text-align: center;
+    background-color: blue;
+    border: solid 1px black;
+}
+
+#slides {
+    padding: 50px;
+    display: none;
+    
+}
+	</style>
+</head>
+<body>
+	<button id="stop">stop sliding</button>
+<div id="slide">click on me</div>
+	<div id="slides">It will get displayed</div>
+
+</body>
+</html>

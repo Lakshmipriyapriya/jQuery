@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Events
+	</title>
+	<script src="./bootstrap/js/jquery.min.js"></script>
+	<!-- <script>
+		jQuery(document).ready(function(){
+			jQuery("p").dblclick(function(){
+				jQuery(this).hide();
+			})
+		})
+	</script> -->
+	<!-- <script>
+		jQuery(document).ready(function(){
+			jQuery("button").mouseenter(function(){
+				alert("you entered your name")
+			})
+		})
+	</script> -->
+	<!-- <script>
+		jQuery(document).ready(function(){
+			jQuery("button").mouseleave(function(){
+				alert("bye! you are leaving ")
+			})
+		})
+	</script> -->
+	<!-- <script>
+		jQuery(document).ready(function(){
+			jQuery("button").mousedown(function(){
+				alert("mousedown under button ")
+			})
+		})
+	</script> -->
+	<!-- <script>
+		jQuery(document).ready(function(){
+			jQuery("button").hover(function(){
+				alert("mouse hover on button  ")
+			})
+		})
+	</script> -->
+	<!-- <script>
+		jQuery(document).ready(function(){
+			jQuery("button").focus(function(){
+				jQuery(this).css("background-color","skyblue")
+			})
+		})
+	</script> -->
+	<!-- <script>
+		jQuery(document).ready(function(){
+			jQuery("input").blur(function(){
+				jQuery(this).css("background-color","red")
+			})
+		})
+	</script> -->
+	<script>
+		jQuery(document).ready(function(){
+			jQuery("p").on("click",function(){
+				jQuery(this).hide();
+			})
+		})
+	</script>
+</head>
+<body>
+	<!-- <p>double click on me to disapare</p> -->
+	<input type="text" placeholder="name">
+
+	<button>
+		Enter
+	</button>
+	<p>
+		click on me
+	</p>
+
+</body>
+</html>
