@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="../bootstrap/js/jquery.min.js"></script>
+	<script>
+	jQuery(document).ready(function(){
+		jQuery("#btn1").click(function(){
+			jQuery("#test1").text("hello world")
+		})
+		jQuery("#btn2").click(function(){
+			jQuery("#test2").html("<b>hello world</b>")
+		})
+		jQuery("#btn3").click(function(){
+			jQuery("#test3").val("priya")
+		})
+	})
+</script>
+</head>
+<body>
+	<p id="test1">
+		 view the text file here
+	</p>
+	<p id="test2">
+		 view the html file here
+	</p>
+	<p><input type="text" id="test3" value="k.v"></p>
+	<button id="btn1">
+		view text
+	</button>
+	<button id="btn2">
+		view html
+	</button>
+	<button id="btn3">
+		view value
+	</button>
+
+</body>
+</html>

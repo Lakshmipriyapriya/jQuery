@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="../bootstrap/js/jquery.min.js"></script>
+<script>
+	jQuery(document).ready(function(){
+		jQuery("button").click(function(){
+			jQuery("#div1").load("./demo-file.html");
+		})
+	})
+</script>
+</head>
+<body>
+	<button>
+		Load other file
+	</button>
+	<div id="div1" ><h2>Basic example</h2></div>
+
+</body>
+</html>
