@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Binding
+	</title>
+	<script src="./bootstrap/js/jquery.min.js"></script>
+	<script>
+		jQuery(document).ready(function(){
+			jQuery("button").bind("click",function(){
+				alert("the paragraph was clicked");
+			})
+			 
+		})
+	</script>
+</head>
+<body>
+	<button>
+		click me
+	</button>
+	<p id="p1">this is new paragraph</p>
+</body>
+</html>

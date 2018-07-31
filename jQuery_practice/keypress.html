@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Keypress
+	</title>
+	<script src="./bootstrap/js/jquery.min.js"></script>
+	<script>
+		jQuery(document).ready(function(){
+			jQuery("input").keypress(function(event){
+				jQuery("div").text("key:"+ event.which);
+			})
+			jQuery("button").click(function(){
+				jQuery("input").filter(".int").css("background-color","blue")
+
+			})
+			jQuery("button").click(function(){
+				jQuery("input").filter(".int1").css("background-color","red")
+
+			})
+			
+			jQuery(".get").keydown(function(event){
+				jQuery("div").text("key:"+ event.which);
+			})
+		})
+	</script>
+</head>
+<body>
+	<button>
+		name
+	</button>
+	<p>
+	<input type="text">
+	<input type="text" class="int">
+	<input type="text" class="int1">
+	</p>
+	<input type="text" class="get">
+	<div />
+</body>
+</html>

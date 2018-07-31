@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+<script src="./bootstrap/js/jquery.min.js"></script>
+<script>
+	jQuery(document).ready(function(){
+		jQuery("button").click(function(){
+			jQuery.ajax({url:"./Ajax/demo-file.html",sucess :function(response){
+				jQuery("#div1").result;
+			}
+		})
+	});
+	});
+</script>
+</head>
+<body>
+	<button>
+		Load other file
+	</button>
+	<div id="div1" ><h2>Basic example</h2></div>
+
+</body>
+</html>

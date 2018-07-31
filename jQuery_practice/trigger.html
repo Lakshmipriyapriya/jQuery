@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Trigger
+	</title>
+	<script src="./bootstrap/js/jquery.min.js"></script>
+	<script>
+		jQuery(document).ready(function(){
+			 jQuery("input").select(function(){
+        jQuery("input").after("value triggerd!");
+    });
+    jQuery("button").click(function(){
+        jQuery("input").trigger("select");
+    });
+		})
+	</script>
+</head>
+<body>
+	<input type="text" value="name">
+	<button>
+		click me!
+	</button>
+
+</body>
+</html>
