@@ -9,21 +9,21 @@
 		jQuery(document).ready(function(){
 
 			jQuery("button").click(function(){
-				txt=jQuery("#t1").val();
-				des=jQuery("#d1").val();
-				jQuery("#tasksList").append("Title :"+txt+"<p></p>"+"\n Description: "+des+"<p></p>");
-				jQuery("#tasksList").detach("Title :"+txt+"<p></p>"+"\n Description: "+des+"<p></p>");
+				text=jQuery("#t1").val();
+				Description=jQuery("#d1").val();
+				jQuery("#tasksList").append("Title :"+text+"<p></p>"+"\n Description: "+Description+"<p></p>");
+				
 
 				});
 			});
 	</script>
 </head>
 <body>
-	
 	 <div id="tasksList"> 
 	 	Title:<input type="text" id="t1"><br>
 	Description:<input type="text" id="d1"><br>
 	<button id="b1">Enter</button>
+	
 	</div>
 </body>
 </html>
