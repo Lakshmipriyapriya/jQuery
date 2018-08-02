@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="../font-awesome-4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../bootstrap/css/bootstrap-responsive.min.css">
+  <script src="../bootstrap/js/jquery.min.js"></script>
+	 <script>
+	 	jQuery(document).ready(function(){
+	 		jQuery("#bold").click(function(){
+	 			jQuery("#ta").trigger("select").css('font-weight', 'bold');
+	 		});
+	 		jQuery("#italic").click(function(){
+	 			jQuery("#ta").trigger("select").css('font-style', 'italic');
+	 		});
+	 		jQuery("#ol").click(function(){
+	 			jQuery("#ta").trigger("select").css('font-style', 'ol');
+	 		});
+	 		jQuery("#ul").click(function(){
+	 			jQuery("#ta").trigger("select").css('list-style-type', 'circle');
+	 		});
+	 		jQuery("#link").click(function(){
+                jQuery("#adddetails").modal();
+            });
+	 			
+	 	});
+	 	
+	 		
+	 	
+	 </script>
+</head>
+<body>
+	<div class="container">
+		<div class="row-fluid" style="border: solid #E6E6FA 0.5px;">
+			<a href="#">
+				<ul>
+				<i id="bold" class="fa fa-bold fa-fw fa-lg" style="padding-top:20px"></i>
+				<i id="italic" class="fa fa-italic fa-fw fa-lg"></i>
+				<i id= "ol" class="fa fa-list-ol fa-fw fa-lg"></i>
+				<i  id="ul" class="fa fa-list-ul fa-fw fa-lg"></i>
+				<i id="link" class="fa fa-link fa-fw fa-lg"></i>
+				<i class="fa fa-code fa-fw fa-lg"></i>
+				<i class="fa fa-table fa-fw fa-lg"></i>
+				<i class="fa fa-eye fa-fw fa-lg" style="padding-left: 1000px; padding-top:-20px"></i>
+			</ul>
+			</a>
+		</div>
+	</div>
+</body>
+</html>
