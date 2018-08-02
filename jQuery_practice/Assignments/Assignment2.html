@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="../bootstrap/js/jquery.min.js"></script>
+	<script>
+		jQuery(document).ready(function(){
+			var arr = new Array();
+			jQuery("#btn1").click(function(){
+				text=jQuery("#t1").val();
+				Description=jQuery("#d1").val();
+				jQuery("#taskList").append("Title :"+text+"<p></p>"+"\n Description: "+Description+"<p></p>");
+				arr.push("Title: "+jQuery("#t1").val()+" Description: "+jQuery("#d1").val());
+
+			});
+			jQuery("#btn2").click(function(){
+				arr.pop();
+				jQuery("#taskList").text(arr);
+			})
+		});
+	</script>
+</head>
+<body>
+		Title:<input type="text" id="t1">
+		Description:<input type="text" id="d1">
+		<button id="btn1">
+			Add
+		</button>
+		<button id="btn2">
+			Remove!
+		</button>
+  <div id="taskList">
+	</div>
+</body>
+</html>
