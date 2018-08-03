@@ -5,7 +5,8 @@
 	 <link rel="stylesheet" href="../font-awesome-4.7.0/css/font-awesome.min.css">
 	 <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
      <link rel="stylesheet" href="../bootstrap/css/bootstrap-responsive.min.css">
-  	 <script src="../bootstrap/js/jquery-3.3.1.min.js"></script> 
+  	 <script src="../bootstrap/js/jquery-3.3.1.min.js"></script>
+  	 <script src="../bootstrap/js/bootstrap.min.js"></script>
 	 <script>
 	 	jQuery(document).ready(function(){
 	 		jQuery("#bold").click(function(){
@@ -21,8 +22,12 @@
 	 			jQuery("#ta").trigger("select").css('list-style-type', 'circle');
 	 		});
 	 		jQuery("#link").click(function(){
-                 jQuery("#linkdetails").modal('show');
-            });	
+               jQuery("#linkdetails").modal();
+               	jQuery("#btnadd").click(function(){
+               		 data=jQuery("#input1").val();
+               		 jQuery("#ta").text(data); 		  
+               	})
+            });
 	 	});	
 	</script>
 </head>
@@ -45,16 +50,16 @@
 		<div class="row-fluid" style="border:solid #E6E6FA 0.3px;height: 250px;">
                 <textarea id="ta" class="command" style="width: 1156px; height: 249px; margin: 0px 0px 10px; font-weight:;" placeholder="Leave a comment..." ></textarea>
         </div>
-            <div id="linkdetails" class="modal fade">
+            <div id="linkdetails" class="modal hide fade">
             	<div class="modal-header">
             		<button type="button" class="close" data-dismiss="modal">&times;</button>
             		<h4>Insert Link</h4>
             	</div>	
             	<div class="modal-body">
-            		<input type="text" placeholder="Link">
+            		<input type="text" id="input1" placeholder="Link">
             	</div>
             	<div class="modal-footer">
-                    <button class="btn btn-primary">Add</button>
+                    <button id="btnadd" class="btn btn-primary">Add</button>
                     <button class="btn" data-dismiss="modal" aria-hidden="true">cancle</button>
                 </div>
 	        </div>
