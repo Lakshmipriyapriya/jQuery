@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		File upload
+	</title>
+	<link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+  <script src="../bootstrap/js/jquery.min.js"></script>
+	 <script>
+	 	jQuery(document).ready(function(){
+	 		jQuery("#b1").click(function(){
+	 			 jQuery(".div").append(jQuery("#fam1"));	
+	 		})
+	 		jQuery("#b2").click(function(){
+	 			alert("file uploaded");
+	 	    })
+	 	})
+	 </script>
+</head>
+<body>
+   <div class="div">
+            <form id="fam1">
+                <input type="file" class="file" id="f1">
+                <button class="btn" id="b1">+</button>
+            </form>
+    
+        <button class="btn" id="b2">
+        	Upload
+        </button>
+ 	</div>
+</body>
+</html>
