@@ -8,33 +8,26 @@
     <link rel="stylesheet" href="../bootstrap/css/bootstrap-responsive.min.css">
 	<script src="../bootstrap/js/jquery.min.js"></script>
 	<script src="../bootstrap/js/bootstrap.min.js"></script>
-	<style>
-		body{
-			padding:300 px;
-		}
-	</style>
 	 <script>
 	 	jQuery(document).ready(function(){
 	 		jQuery("#b1").click(function(){
-	 			 jQuery(".div").append(jQuery("#fam1"));	
+	 			 jQuery(".div").append(' <input type="file" class="file" id="f2">');	
 	 		})
 	 		jQuery("#b2").click(function(){
 	 			alert("file uploaded");
 	 	    })
 	 	})
 	 </script>
-
 </head>
 <body>
    <div class="div">
-            <form id="fam1">
+            
                 <input type="file" class="file" id="f1">
                 <button class="btn btn-primary" id="b1">+</button>
-            </form>
-    </div>
+            
         <button class="btn" id="b2">
         	Upload
         </button>
- 	
+ 	</div>
 </body>
 </html>
