@@ -12,9 +12,18 @@
 	 		jQuery("#bold").click(function(){
 	 			jQuery("#ta").trigger("select").css('font-weight', 'bold');
 	 		});
-	 		jQuery("#italic").click(function(){
-	 			jQuery("#ta").trigger("select").css('font-style', 'italic');
+	 		 jQuery("#italic").click(function(){
+	 		 jQuery("#ta").trigger("select").css('font-style', 'italic');
 	 		});
+	 		 jQuery("#table").click( function() {
+	 		 jQuery("#ta").trigger("select", function(){
+             var data = table.jQuery('input, select').serialize();    
+             })
+	 		 })
+	 		 jQuery("#code").click( function() {
+	 		 a=jQuery("#ta").trigger("select").val();
+	 		 //jQuery("#ta").text("<code> 'a' </code>") 
+	 		})
 	 		jQuery("#ol").click(function(){
 	 			jQuery("#ta").trigger("select").css('font-style', 'ol');
 	 		});
@@ -36,16 +45,15 @@
 		<div class="row-fluid" style="border: solid #E6E6FA 0.5px;">
 			<a href="#">
 				<ul>
-				<i id="bold" class="fa fa-bold fa-fw fa-lg" style="padding-top:20px"></i>
-				<i id="italic" class="fa fa-italic fa-fw fa-lg"></i>
-				<i id= "ol" class="fa fa-list-ol fa-fw fa-lg"></i>
-				<i  id="ul" class="fa fa-list-ul fa-fw fa-lg"></i>
-				<i id="link" class="fa fa-link fa-fw fa-lg" data-toggle="modal"></i>
-				<i class="fa fa-code fa-fw fa-lg"></i>
-				<i class="fa fa-table fa-fw fa-lg"></i>
-				<i class="fa fa-eye fa-fw fa-lg" style="padding-left: 1000px; padding-top:-20px"></i>
+				 <a href="#" ><i id="bold" class="fa fa-bold fa-fw fa-lg" style="padding-top:20px"></i></a>
+				<a href="#"><i id="italic" class="fa fa-italic fa-fw fa-lg"></i></a>
+				<a href="#"><i id= "ol" class="fa fa-list-ol fa-fw fa-lg"></i></a>
+				<a href="#"><i  id="ul" class="fa fa-list-ul fa-fw fa-lg"></i></a>
+				<a href="#"><i id="link" class="fa fa-link fa-fw fa-lg" data-toggle="modal"></i></a>
+				<a href="#"><i id="code" class="fa fa-code fa-fw fa-lg"></i></a>
+				<a href="#"><i id="table" class="fa fa-table fa-fw fa-lg"></i></a>
+				<a href="#"><i class="fa fa-eye fa-fw fa-lg" style="padding-left: 1000px; padding-top:-20px"></i></a>
 			</ul>
-			</a>
 		</div>
 		<div class="row-fluid" style="border:solid #E6E6FA 0.3px;height: 250px;">
                 <textarea id="ta" class="command" style="width: 1156px; height: 249px; margin: 0px 0px 10px; font-weight:;" placeholder="Leave a comment..." ></textarea>

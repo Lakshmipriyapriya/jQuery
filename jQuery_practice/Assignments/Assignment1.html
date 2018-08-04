@@ -1,10 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>
-		Add
-	</title>
+	<link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap-responsive.min.css">
 	<script src="../bootstrap/js/jquery.min.js"></script>
+	<script src="../bootstrap/js/bootstrap.min.js"></script>
+	<style>
+		body{
+			padding:300 px;
+		}
+	</style>
 	<script>
 		jQuery(document).ready(function(){
 
@@ -12,18 +17,17 @@
 				text=jQuery("#t1").val();
 				Description=jQuery("#d1").val();
 				jQuery("#tasksList").append("Title :"+text+"<p></p>"+"\n Description: "+Description+"<p></p>");
-				
-
 				});
 			});
 	</script>
 </head>
 <body>
 	 <div id="tasksList"> 
-	 	Title:<input type="text" id="t1"><br>
+	 	<br>Title:<input type="text" id="t1"><br>
 	Description:<input type="text" id="d1"><br>
-	<button id="b1">Enter</button>
+	<button class="btn" id="b1">Enter</button><br>
 	
 	</div>
+	
 </body>
 </html>
