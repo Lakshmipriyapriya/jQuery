@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="../font-awesome-4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap-responsive.min.css">
+	<script src="../bootstrap/js/jquery.min.js"></script>
+	<script src="../bootstrap/js/bootstrap.min.js"></script>
+</head>
+<body>
+<body>
+	<div class="span6" id="text" class="ellipsis" >
+		<p id="myPara" style="text-overflow: ellipsis">
+			 A complete sample is a set of objects from a parent population that includes ALL such objects that satisfy a set of well-defined selection criteria.[3] For example, a complete sample of Australian men taller than 2m would consist of a list of every Australian male taller than 2m. But it wouldn't include German males, or tall Australian females, or people shorter than 2m. So to compile such a complete sample requires a complete list of the parent population, including data on height, gender, and nationality for each member of that parent population. In the case of human populations, such a complete list is unlikely to exist (the human population being in the billions). But, such complete samples are often available in other disciplines such as the set of players in a major sports league, the birth dates of the members of a parliament, or a complete magnitude-limited list of astronomical objects.
+			An unbiased (representative) sample is a set of objects chosen from a complete sample using a selection process that does not depend on the properties of the objects.[4] For example, an unbiased sample of Australian men taller than 2m might consist of a randomly sampled subset of 1% of Australian males taller than 2m. But one chosen from the electoral register might not be unbiased since, for example, males aged under 18 will not be on the electoral register. In an astronomical context, an unbiased sample might consist of that fraction of a complete sample for which data are available, provided the data availability is not biased by individual source properties.
+			The best way to avoid a biased or unrepresentative sample is to select a random sample, also known as a probability sample. A random sample is defined as a sample where each individual member of the population has a known, non-zero chance of being selected as part of the sample.[5] Several types of random samples are simple random samples, systematic samples, stratified random samples, and cluster random samples.
+			<button id="parabtn">
+	filter
+</button>
+	</div>
+</p>
+<div class="btn" >
+<input type="text" class="search-query" id="textArea" placeholder="Search">
+<i  class="fa fa-search fa-fw fa-lg" id="searchId"></i>
+
+</div>
+<div id="divId3">
+	
+</div>
+	<script>
+		jQuery(document).ready(function(){
+			jQuery("#parabtn").click(function(){
+			newText=jQuery("#myPara").text();
+			paragraph=newText.trim().substr(0,300);
+			jQuery("#myPara").text(paragraph+"...");
+
+		});
+		jQuery("#searchId").click(function(){
+			var searchText=jQuery("#textArea").val();
+			var totalText=jQuery("#myPara").text();
+			var line=[];
+			var lineWords=[];
+			var line=totalText.split(".");
+			var lineCount= line.length;
+			for(var i=0; i<lineCount;i++){
+				var lineData=line[i];
+				var lineWords=lineData.split(" ");
+				var wordCount= lineWords.length;
+				for(var j=0; j<wordCount; j++){
+					if(searchText==lineWords[j]){
+						jQuery("#divId3").append("data:"+searchText+" contains" +line[i] );
+
+					}
+				}
+			}
+		})
+	});	
+	</script>			
+</body>
+</html>
